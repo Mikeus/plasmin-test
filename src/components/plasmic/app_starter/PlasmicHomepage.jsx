@@ -145,6 +145,18 @@ function PlasmicHomepage__RenderFunc(props) {
             data-plasmic-override={overrides.section}
             className={classNames(projectcss.all, sty.section)}
           >
+            <h1
+              data-plasmic-name={"h1"}
+              data-plasmic-override={overrides.h1}
+              className={classNames(
+                projectcss.all,
+                projectcss.h1,
+                projectcss.__wab_text,
+                sty.h1
+              )}
+            >
+              {"You won't believe what happens next."}
+            </h1>
             <div
               data-plasmic-name={"columns"}
               data-plasmic-override={overrides.columns}
@@ -521,6 +533,7 @@ const PlasmicDescendants = {
   root: [
     "root",
     "section",
+    "h1",
     "columns",
     "column",
     "form",
@@ -536,6 +549,7 @@ const PlasmicDescendants = {
 
   section: [
     "section",
+    "h1",
     "columns",
     "column",
     "form",
@@ -549,6 +563,7 @@ const PlasmicDescendants = {
     "text"
   ],
 
+  h1: ["h1"],
   columns: [
     "columns",
     "column",
@@ -668,6 +683,7 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     section: makeNodeComponent("section"),
+    h1: makeNodeComponent("h1"),
     columns: makeNodeComponent("columns"),
     column: makeNodeComponent("column"),
     form: makeNodeComponent("form"),
